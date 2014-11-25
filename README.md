@@ -16,7 +16,7 @@ Code List
 
 - JniBuffer 演示了各种从Java端到Native层的Buffer传递方法，相关博文：[Android开发实践：Java层与Jni层的数组传递](http://ticktick.blog.51cto.com/823160/1360240)
 
-
+- LoopThread 演示了如何实现一个自定义的带Loop消息循环的线程，相关博文：[Android开发实践：自定义带消息循环（Looper）的工作线程](http://ticktick.blog.51cto.com/823160/1565272)
 
 Thanks
 ----------
