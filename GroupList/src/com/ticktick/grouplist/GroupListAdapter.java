@@ -14,25 +14,24 @@ public class GroupListAdapter extends BaseExpandableListAdapter {
 	private List<GroupList> mGroups;
 	
 	public GroupListAdapter(Context context, List<GroupList> groups) {
-		this.mContext = context;
-		this.mGroups  = groups;
+            this.mContext = context;
+            this.mGroups  = groups;
 	}
 	
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
 		
 	    List<GroupList> chList = mGroups.get(groupPosition).getChild();
-		if( chList == null) {
-		    return null;
-		}
+            if( chList == null) {
+                return null;
+            }
 	    
 	    return chList.get(childPosition);
 	}
 
 	@Override
 	public long getChildId(int groupPosition, int childPosition) {
-
-		return childPosition;
+            return childPosition;
 	}
 
 	@Override
@@ -46,11 +45,11 @@ public class GroupListAdapter extends BaseExpandableListAdapter {
 	    if (view == null) {		
 	    	LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);			
 	    	view = (RelativeLayout)inflater.inflate(child.getResource(), null);
-		}
+            }
 	        
 	    child.buildView(view);
 		
-		return view;
+            return view;
 	}
 
 	@Override
@@ -61,22 +60,22 @@ public class GroupListAdapter extends BaseExpandableListAdapter {
 	        return 0;
 	    }
 		
-		return chList.size();
+            return chList.size();
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
-		return mGroups.get(groupPosition);
+            return mGroups.get(groupPosition);
 	}
 
 	@Override
 	public int getGroupCount() {
-		return mGroups.size();
+            return mGroups.size();
 	}
 
 	@Override
 	public long getGroupId(int groupPosition) {
-		return groupPosition;
+            return groupPosition;
 	}
 
 	@Override
@@ -84,24 +83,23 @@ public class GroupListAdapter extends BaseExpandableListAdapter {
 
 	    GroupList group = (GroupList)getGroup(groupPosition);
 	    
-		if (view == null) {
-
-			LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);			
+            if (view == null) {
+                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);			
 	    	view = (RelativeLayout)inflater.inflate(group.getResource(), null);	   
-		}
+            }
 
-		group.buildView(view);
+            group.buildView(view);
 		
-		return view;
+            return view;
 	}
 
 	@Override
 	public boolean hasStableIds() {
-		return true;
+            return true;
 	}
 
 	@Override
 	public boolean isChildSelectable(int arg0, int arg1) {
-		return true;
+            return true;
 	}
 }

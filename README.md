@@ -8,6 +8,7 @@ Code List
 
 - GroupList 封装并演示了如何使用Android的ExpandableListView控件，相关博文：[Android开发实践：多级列表的封装与应用](http://ticktick.blog.51cto.com/823160/1289642)
 
+- PopDialog 封装并演示了如何使用Android的PopupWindow控件，相关博文：[Android开发实践：用PopupWindow实现自定义Dailog](http://ticktick.blog.51cto.com/823160/1332083)
 
 
 Thanks
