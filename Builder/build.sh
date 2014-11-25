@@ -1,7 +1,26 @@
+#########################################################
+#  COPYRIGHT NOTICE  
+#  Copyright (C) 2014, ticktick <lujun.hust@gmail.com>
+#  http://ticktick.blog.51cto.com/823160/1365947
+#   
+#  @license under the Apache License, Version 2.0 
+#
+#  @file    build.sh 
+#  @brief   build android project using ant
+#
+#  @version 1.0     
+#  @author  ticktick
+#  @date    2014/03/02  
+# 
+#########################################################
+
 #!/bin/bash
 
-#NOTE: 用法，在本工程根目录下执行 ./build.sh xxx
-#其中，xxx为参数，可以是clean debug release，也可以不带参数，不带参数默认为debug
+#用法： 
+#1. 将本目录下的三个文件放到Android工程根目录下 
+#2. 修改 ANDROID_SDK_PATH,ANDROID_NDK_PATH,ANT_PATH 路径
+#3. 在命令行执行：./build.sh xxx
+#3. 其中，xxx为参数，可以是clean debug release，也可以不带参数，不带参数默认为debug
 
 #如果参数是 clean，  则会删除所有编译生成的文件
 #如果参数是 debug ， 则会生成 debug 版本的apk;
@@ -12,7 +31,7 @@
 #获取本目录的名称，作为build.xml的项目名称
 PROJECT_NAME=${PWD##*/}
 
-#路径配置，请根据编译环境修改
+#路径配置，请根据你的编译环境修改下面这三个变量定义
 ANDROID_SDK_PATH=/opt/android/sdk
 ANDROID_NDK_PATH=/opt/android/ndk
 ANT_PATH=/opt/apache-ant-1.9.0/bin
