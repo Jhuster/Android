@@ -1,4 +1,20 @@
-package com.ticktick.juncodetool.ui;
+/*
+ *  COPYRIGHT NOTICE  
+ *  Copyright (C) 2014, ticktick <lujun.hust@gmail.com>
+ *  http://ticktick.blog.51cto.com/
+ *   
+ *  @license under the Apache License, Version 2.0 
+ *
+ *  @file    CustomView.java 
+ *  @brief   给出了自定义View的模板
+ *  
+ *  @version 1.0     
+ *  @author  ticktick
+ *  @date    2014/08/14  
+ * 
+ */
+
+package com.ticktick.example.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -12,11 +28,11 @@ public class CustomView extends View {
 	private static final int DEFAULT_VIEW_HEIGHT = 100;
 	
 	public CustomView(Context context) {
-		super(context);	
+            super(context);	
 	}
 
 	public CustomView(Context context, AttributeSet attrs) {
-		super(context, attrs);		
+            super(context, attrs);		
 	}
 	
 	@Override

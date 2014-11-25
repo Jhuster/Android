@@ -1,4 +1,20 @@
-package com.ticktick.juncodetool.ui;
+/*
+ *  COPYRIGHT NOTICE  
+ *  Copyright (C) 2014, ticktick <lujun.hust@gmail.com>
+ *  http://ticktick.blog.51cto.com/
+ *   
+ *  @license under the Apache License, Version 2.0 
+ *
+ *  @file    CustomViewGroup.java 
+ *  @brief   定义了一个行优先布局的Layout
+ *  
+ *  @version 1.0     
+ *  @author  ticktick
+ *  @date    2014/08/19  
+ * 
+ */
+
+package com.ticktick.example.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

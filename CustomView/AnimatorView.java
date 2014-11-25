@@ -1,4 +1,20 @@
-package com.ticktick.testanimatorview;
+/*
+ *  COPYRIGHT NOTICE  
+ *  Copyright (C) 2014, ticktick <lujun.hust@gmail.com>
+ *  http://ticktick.blog.51cto.com/
+ *   
+ *  @license under the Apache License, Version 2.0 
+ *
+ *  @file    AnimatorView.java 
+ *  @brief   实现了一个矩状图动画效果的自定义View
+ *  
+ *  @version 1.0     
+ *  @author  ticktick
+ *  @date    2014/08/27  
+ * 
+ */
+
+package com.ticktick.example.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -16,11 +32,11 @@ public class AnimatorView extends View {
 
 	//待绘制的矩形块矩阵，left为高度，right为颜色
 	private static final int[][] RECT_ARRAY = { 
-		{380,Color.GRAY},
-		{600,Color.YELLOW},
-		{200,Color.GREEN},
-		{450,Color.RED},
-		{300,Color.BLUE}
+            {380,Color.GRAY},
+            {600,Color.YELLOW},
+            {200,Color.GREEN},
+            {450,Color.RED},
+            {300,Color.BLUE}
 	};
 	
 	private Paint mPaint;	
@@ -28,13 +44,13 @@ public class AnimatorView extends View {
 	private boolean mIsAnimaionRun = false;
 
 	public AnimatorView(Context context) {
-		super(context);	
-		initialize();
+            super(context);	
+            initialize();
 	}
 
 	public AnimatorView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		initialize();
+            super(context, attrs);
+            initialize();
 	}
 	
 	public AnimatorView(Context context, AttributeSet attrs, int defStyle) {
@@ -73,8 +89,8 @@ public class AnimatorView extends View {
 	}
 	
 	public void startAnimation() {
-		mIsAnimaionRun = true;
-		invalidate();
+            mIsAnimaionRun = true;
+            invalidate();
 	}
 	
 }

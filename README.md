@@ -20,11 +20,11 @@ Code List
 
 - CustomView 演示了如何自定义View和ViewGroup，并给出了一个柱状图动画自定义View的实现，相关博文：
 
-(1) [Android开发实践：为什么要继承onMeasure()](http://ticktick.blog.51cto.com/823160/1540134)
+- （1）[Android开发实践：为什么要继承onMeasure()](http://ticktick.blog.51cto.com/823160/1540134)
 
-(2) [Android开发实践：自定义ViewGroup的onLayout()分析](http://ticktick.blog.51cto.com/823160/1542200)
+- （2）[Android开发实践：自定义ViewGroup的onLayout()分析](http://ticktick.blog.51cto.com/823160/1542200)
 
-(3) [Android开发实践：自定义带动画的View](http://ticktick.blog.51cto.com/823160/1545863)
+- （3）[Android开发实践：自定义带动画的View](http://ticktick.blog.51cto.com/823160/1545863)
 
 
 
