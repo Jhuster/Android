@@ -10,6 +10,11 @@ Code List
 
 - PopDialog 封装并演示了如何使用Android的PopupWindow控件，相关博文：[Android开发实践：用PopupWindow实现自定义Dailog](http://ticktick.blog.51cto.com/823160/1332083)
 
+- JniCallback 演示了如何从Native线程回调Java的函数，相关博文：[Android开发实践：JNI层线程回调Java函数示例](http://ticktick.blog.51cto.com/823160/1358558)
+
+- JniBuffer 演示了各种从Java端到Native层的Buffer传递方法，相关博文：[Android开发实践：Java层与Jni层的数组传递](http://ticktick.blog.51cto.com/823160/1360240)
+
+
 
 Thanks
 ----------
