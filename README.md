@@ -26,6 +26,11 @@ Code List
 
 - （3）[Android开发实践：自定义带动画的View](http://ticktick.blog.51cto.com/823160/1545863)
 
+- WIFI 封装了Andriod WIFI扫描和连接的相关API，相关博文：
+
+- （1）[Android开发实践：WIFI扫描功能的封装](http://ticktick.blog.51cto.com/823160/1394948)
+
+- （2）[Android开发实践：WIFI连接功能的封装](http://ticktick.blog.51cto.com/823160/1410080)
 
 
 
