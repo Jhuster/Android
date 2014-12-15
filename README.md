@@ -32,6 +32,9 @@ Code List
 
 - （2）[Android开发实践：WIFI连接功能的封装](http://ticktick.blog.51cto.com/823160/1410080)
 
+- Utils 给出了一系列的工具类代码
+
+- （1）SignatureGen.java 一个可以生成Java函数签名字符串的工具类，相关博文: [Android开发实践：JNI函数签名生成器](http://ticktick.blog.51cto.com/823160/1590209)
 
 
 Thanks
