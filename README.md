@@ -18,6 +18,10 @@ Code List
 
 - LoopThread 演示了如何实现一个自定义的带Loop消息循环的线程，相关博文：[Android开发实践：自定义带消息循环（Looper）的工作线程](http://ticktick.blog.51cto.com/823160/1565272)
 
+- VideoPlayer 演示了Android隐式Intent的用法，相关博文：[Android开发实践：实战演练隐式Intent的用法](http://ticktick.blog.51cto.com/823160/1621957)
+
+- VideoServer 演示了如何利用NanoHttpd搭建一个Android视频服务器，相关博文：[基于NanoHttpd的Android视频服务器开发](http://ticktick.blog.51cto.com/823160/1705767)
+
 - CustomView 演示了如何自定义View和ViewGroup，并给出了一个柱状图动画自定义View的实现，相关博文：
 
 - （1）[Android开发实践：为什么要继承onMeasure()](http://ticktick.blog.51cto.com/823160/1540134)
