@@ -1,7 +1,7 @@
 /*
  *  COPYRIGHT NOTICE  
- *  Copyright (C) 2015, ticktick <lujun.hust@gmail.com>
- *  http://ticktick.blog.51cto.com/
+ *  Copyright (C) 2015, Jhuster <lujun.hust@gmail.com>
+ *  https://github.com/Jhuster/Android
  *   
  *  @license under the Apache License, Version 2.0 
  *
@@ -9,10 +9,10 @@
  *  @brief   Bitmap processor, include load,save,rotate,crop etc.
  *  
  *  @version 1.0     
- *  @author  ticktick
- *  @date    2015/01/14    
+ *  @author  Jhuster
+ *  @date    2015/11/20    
  */
-package com.ticktick.testbitmap;
+package com.jhuster.imageprocessor;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -25,11 +25,11 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.Bitmap.CompressFormat;
+import android.media.ThumbnailUtils;
 
 public class BitmapHelper {
 
-    public static Bitmap load( String filepath ) {
-
+    public static Bitmap load(String filepath) {
         Bitmap bitmap = null;
         try {
             FileInputStream fin = new FileInputStream(filepath);
@@ -45,12 +45,13 @@ public class BitmapHelper {
         return bitmap;
     }
     
-    public static void save( Bitmap bitmap, String filepath ) {
+    public static boolean save(Bitmap bitmap, String filepath) {
         try {
             FileOutputStream fos = new FileOutputStream(filepath);
             bitmap.compress(CompressFormat.JPEG, 100, fos);              
             bitmap.recycle();            
-            fos.close();            
+            fos.close(); 
+            return true;
         }
         catch (FileNotFoundException e) {
             
@@ -58,13 +59,14 @@ public class BitmapHelper {
         catch (IOException e) {      
             
         }   
+        return false;
     }
     
-    public static Bitmap crop( Bitmap bitmap, Rect cropRect ) {
+    public static Bitmap crop(Bitmap bitmap, Rect cropRect) {
         return Bitmap.createBitmap(bitmap,cropRect.left,cropRect.top,cropRect.width(),cropRect.height());
     }
     
-    public static Bitmap cropWithCanvas( Bitmap bitmap, Rect cropRect ) {
+    public static Bitmap cropWithCanvas(Bitmap bitmap, Rect cropRect) {
         Rect destRect = new Rect(0,0,cropRect.width(),cropRect.height());
         Bitmap cropped = Bitmap.createBitmap(cropRect.width(),cropRect.height(),Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(cropped);        
@@ -72,13 +74,13 @@ public class BitmapHelper {
         return cropped;
     }
     
-    public static Bitmap rotate( Bitmap bitmap, int degrees  ) {
+    public static Bitmap rotate(Bitmap bitmap, int degrees) {
         Matrix matrix = new Matrix();
         matrix.postRotate(degrees);            
         return Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(),bitmap.getHeight(),matrix,true);
     }
     
-    public static Bitmap rotateWithCanvas( Bitmap bitmap, int degrees  ) {
+    public static Bitmap rotateWithCanvas(Bitmap bitmap, int degrees) {
         
         int destWidth,destHeight;
         
@@ -107,4 +109,7 @@ public class BitmapHelper {
         return cropped;
     }
 
+    public static Bitmap getThumbnail(Bitmap bitmap,int width,int height) {        
+        return ThumbnailUtils.extractThumbnail(bitmap,width,height);
+    }
 }
