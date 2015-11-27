@@ -36,11 +36,19 @@ Code List
 
 - （2）[Android开发实践：WIFI连接功能的封装](http://ticktick.blog.51cto.com/823160/1410080)
 
+- Socket封装了Android中的Socket相关API
+
+- （1） Broadcaster.java 封装了UDP广播包的收发操作，相关博文：[Android Socket 发送广播包的那些坑](http://ticktick.blog.51cto.com/823160/1707858)
+
+- MediaDemo 给出了Android平台下多媒体相关API的demo代码，相关博文：[Android中如何提取和生成mp4文件](http://ticktick.blog.51cto.com/823160/1710743)
+
 - Utils 给出了一系列的工具类代码
 
 - （1）SignatureGen.java 一个可以生成Java函数签名字符串的工具类，相关博文: [Android开发实践：JNI函数签名生成器](http://ticktick.blog.51cto.com/823160/1590209)
 
 - （2）BitmapHelper.java 一个封装了Bitmap操作的工具类，包括图片的打开、保存、剪裁、旋转等操作，相关博文: [Android开发实践：自己动手编写图片剪裁应用（3）](http://ticktick.blog.51cto.com/823160/1604074)
+
+- （3）ImageConvertor.java 封装了Android中各种图像格式转换，包括：NV21，YUY2、RGB565、ARGB8888、PNG、JPEG、Bitmap之间的转换操作。
 
 Thanks
 ----------
