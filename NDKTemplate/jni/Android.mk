@@ -26,7 +26,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := native_sdk
 
 LOCAL_SRC_FILES := \
-	$(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/src/algorithm/*.c))  \
+    $(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/src/algorithm/*.c))  \
     $(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/src/core/*.c))  \
     $(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/src/network/*.c)) \
     $(subst $(LOCAL_PATH)/,,$(wildcard $(LOCAL_PATH)/src/utils/*.c)) \
@@ -58,3 +58,4 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/src
 LOCAL_LDLIBS := -llog -fPIE -pie
 LOCAL_SHARED_LIBRARIES:= native_sdk
 include $(BUILD_EXECUTABLE)
+
