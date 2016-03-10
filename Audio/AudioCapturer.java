@@ -1,3 +1,17 @@
+/*
+ *  COPYRIGHT NOTICE  
+ *  Copyright (C) 2016, Jhuster <lujun.hust@gmail.com>
+ *  https://github.com/Jhuster/Android
+ *   
+ *  @license under the Apache License, Version 2.0 
+ *
+ *  @file    AudioCapturer.java
+ *  
+ *  @version 1.0     
+ *  @author  Jhuster
+ *  @date    2016/03/10    
+ */
+ 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
