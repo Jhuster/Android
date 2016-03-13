@@ -11,10 +11,12 @@
  *  @author  Jhuster
  *  @date    2016/03/10    
  */
- 
+package com.jhuster.audiodemo;
+
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
+import android.os.SystemClock;
 import android.util.Log;
 
 public class AudioCapturer {
@@ -69,7 +71,7 @@ public class AudioCapturer {
         mAudioRecord = new AudioRecord(audioSource,sampleRateInHz,channelConfig,audioFormat,mMinBufferSize);				
         if (mAudioRecord.getState() == AudioRecord.STATE_UNINITIALIZED) {
     	    Log.e(TAG, "AudioRecord initialize fail !");
-	    return false;
+    	    return false;
         }		
 
         mAudioRecord.startRecording();
@@ -91,7 +93,7 @@ public class AudioCapturer {
             return;
         }
 
-        mIsLoopExit = false;		
+        mIsLoopExit = true;		
         try {
             mCaptureThread.interrupt();
             mCaptureThread.join(1000);
@@ -128,15 +130,14 @@ public class AudioCapturer {
                 else if (ret == AudioRecord.ERROR_BAD_VALUE) {
                     Log.e(TAG , "Error ERROR_BAD_VALUE");
                 } 
-                else if (ret == AudioRecord.ERROR_INVALID_OPERATION) {
-                    Log.e(TAG , "Error ERROR_INVALID_OPERATION");
-                }
                 else { 
                     if (mAudioFrameCapturedListener != null) {
                         mAudioFrameCapturedListener.onAudioFrameCaptured(buffer);
                     }   
                     Log.d(TAG , "OK, Captured "+ret+" bytes !");
-                }														
+                }			
+                
+                SystemClock.sleep(10);
             }		
         }    
     }
